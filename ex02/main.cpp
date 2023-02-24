@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 09:54:08 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/23 13:23:33 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/02/24 06:57:35 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,21 @@ void	subject_test()
 	Fixed b;
 	Fixed const c( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << --b << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << b-- << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
+	std::cout << "a : " << a << std::endl;
+	std::cout << "b : " << b << std::endl;
+	std::cout << "++a : " << ++a << std::endl;
+	std::cout << "--b ; "<< --b << std::endl;
+	std::cout << "a : "<< a << std::endl;
+	std::cout << "b : "<< b << std::endl;
+	std::cout << "a++ : "<< a++ << std::endl;
+	std::cout << "b-- : "<< b-- << std::endl;
+	std::cout << "a : " <<a << std::endl;
+	std::cout << "b : " << b << std::endl;
 	
-	std::cout << c << std::endl;
+	std::cout << "c = 5.05 * 2 : " << c << std::endl;
 	
-	std::cout << Fixed::max( a, c ) << std::endl;
+	std::cout <<"max a,c : " << Fixed::max( a, c ) << std::endl;
+	std::cout <<"min a,c : " << Fixed::min( a, c ) << std::endl;
 }
 
 void	my_test()
@@ -60,6 +61,5 @@ int main( void ) {
 	subject_test();
 	std::cout << "\n\n\n\n";
 	my_test();
-	system("leaks ex02"); 
 	return 0;
 }
